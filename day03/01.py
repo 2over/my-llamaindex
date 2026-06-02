@@ -22,7 +22,7 @@ Settings.embed_model =  HuggingFaceEmbedding(model_name=r"BAAI/bge-small-zh-v1.5
 
 
 # 1.加载文档
-documents = SimpleDirectoryReader(input_files=["./data/西游记第一回.txt"]).load_data()
+documents = SimpleDirectoryReader(input_files=["../data/西游记第一回.txt"]).load_data()
 # 2.创建索引
 index = VectorStoreIndex.from_documents(documents)
 # 3.创建查询引擎

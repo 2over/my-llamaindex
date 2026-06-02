@@ -24,7 +24,7 @@ Settings.llm = DashScope(model_name=model, api_key=api_key, api_base_url=api_bas
 # 加载本地的嵌入模型
 Settings.embed_model = HuggingFaceEmbedding(model_name=r"BAAI/bge-small-zh-v1.5")
 
-documents = SimpleDirectoryReader(input_files=["./data/钢铁是怎样炼成的片段.txt"]).load_data()
+documents = SimpleDirectoryReader(input_files=["../data/钢铁是怎样炼成的片段.txt"]).load_data()
 
 # 分割文本设置-按照token数量进行分割,,,,,,,token被真正命名了 -> "词元"
 text_splitter = TokenTextSplitter(

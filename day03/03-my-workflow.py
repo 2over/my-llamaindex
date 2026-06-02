@@ -23,7 +23,7 @@ async def main():
     # await关键字: 用于等待异步操作完成，只能在async函数内使用
     result = await w.run()
 
-    draw_all_possible_flows(w, "my_workflow.html")
+    draw_all_possible_flows(w, "../my_workflow.html")
     print(result)
 
 if __name__ == "__main__":

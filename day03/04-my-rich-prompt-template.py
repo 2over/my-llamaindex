@@ -35,4 +35,4 @@ print("=== 格式化后的多模态聊天消息列表 ===")
 for idx, msg in enumerate(messages):
     print(f"\n【消息{idx + 1}】")
     print(f"角色：{msg.role}")
-    print(f"内容:{msg.content.strip()}")
+    print(f"内容: {msg.content.strip()}")
