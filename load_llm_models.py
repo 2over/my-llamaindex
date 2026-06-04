@@ -36,8 +36,11 @@ def get_deepseek_llm(model: str = "deepseek-chat"):
     api_base_url = os.getenv("DEEPSEEK_BASE_URL")
 
     # LlamaIndex默认使用的大模型被替换为百炼
-    embed_model = HuggingFaceEmbedding(model_name=r"BAAI/bge-small-zh-v1.5", device=device, embed_batch_size=2)
+    llm = DeepSeek(model=model, api_key=api_key, api_base_url=api_base_url, is_chat_model=True)
 
+    Settings.llm = llm
+    embed_model =HuggingFaceEmbedding(model_name=r"BAAI/bge-small-zh-v1.5", device=device, embed_batch_size=2)
+    #加载本地的嵌入模型
 
     # 设置默认的向量模型为本地模型
     Settings.embed_model = embed_model
